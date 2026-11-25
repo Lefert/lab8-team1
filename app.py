@@ -43,3 +43,12 @@ def get_sample_dishes() -> list[Dish]:
         Dish(1, date(2026, 11, 23), "Омлет", 3000, True),
     ]
 
+def create_window() -> tk.Tk:
+    root = tk.Tk()
+    root.title("Студентська їдальня")
+    root.geometry("600x440")
+    root.minsize(520, 420)
+    root.columnconfigure(0, weight=1)
+    root.rowconfigure(0, weight=1)
+    CanteenApp(root)
+    return root
